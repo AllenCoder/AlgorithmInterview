@@ -6,9 +6,7 @@ package tree; /**
 import java.util.Stack;
 
 /**
- * @author 郭 璞 <br>
- *         二叉树的先序，中序，以及后序，递归以及非递归的实现
- *
+ * 二叉树的先序，中序，以及后序，递归以及非递归的实现
  */
 public class FullScan {
 
