@@ -11,9 +11,9 @@ fun main(args: Array<String>) {
 
     for (i in 0 .. 50) {
         Thread(CountDownMeeting.RunableDemo("Thread" + i, latch)).start()
-
+        Thread.sleep(10)
     }
-    latch.await()
+    latch.countDown()
 }
 class CountDownMeeting{
 
@@ -28,9 +28,8 @@ class CountDownMeeting{
 
         override fun run() {
 
-            Thread.sleep(10)
+            latch?.await()
             println(threadName)
-            latch?.countDown()
         }
     }
 
